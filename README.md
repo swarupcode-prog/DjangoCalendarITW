@@ -1,5 +1,13 @@
 # DjangoCalendarITW
 
+
+## Project Demoimages:
+
+![image](https://user-images.githubusercontent.com/76248886/123541930-826fd280-d764-11eb-9667-87a5de90a783.png)
+
+
+
+
 ## How To Setup
 ```
 conda create --name Env_name django
@@ -24,4 +32,3 @@ python manage.py runserver
 ```
 
 
-![image](https://user-images.githubusercontent.com/76248886/123541930-826fd280-d764-11eb-9667-87a5de90a783.png)
