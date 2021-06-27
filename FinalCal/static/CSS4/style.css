@@ -1,0 +1,256 @@
+.navbar{
+  font-size: 1.45em;
+  display: grid;
+  grid-template-columns: 100% 100% 100% 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+}
+
+.nav-item {
+  transition: all 1s;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.btn {
+  outline: none;
+  color: black;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+}
+
+.clearfix {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: auto;;
+  grid-template-rows: 40px;
+  grid-gap: 20px
+}
+.next_month {
+  grid-column-start: 9;
+}
+
+.new_event {
+  grid-column-start: 8;
+  grid-column-end: 9;
+}
+
+.year-month {
+  display: flex;
+}
+
+#welcometext {
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  color: black;
+  border: 3px solid black;
+  margin: 140px 400px 0px 400px;
+  border-radius: 8px;
+  padding: 25px 0px;
+}
+
+.warning {
+  margin-top: 300px;
+}
+
+.login {
+  margin-top: 200px;
+  margin-left: 720px;
+  width: auto;
+  border: 1px solid;
+}
+
+.event-form {
+  margin-left: 660px;
+  margin-right: 660px;
+  width: 400px;
+  position: relative;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* CSS for Calendar */
+.calendar-event{
+  display: grid;
+  grid-template-columns: 25% 98% auto;
+  grid-template-rows: 646px;
+  grid-gap: 20px
+}
+
+.event-viewbox {
+  margin-left: 15px;
+  height: 100%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.calendar {
+  width: 74.5%;
+  height: 100%;
+  margin: auto;
+  font-size: auto;
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+table.calendar {
+  margin: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.calendar td {
+  border: 1px solid black;
+}
+
+.calendar tr {
+  border: 1px solid black;
+  width: auto;
+}
+
+.calendar th {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.calendar td {
+  width: 300px;
+  height: 110px;
+  padding: 20px 0px 0px 5px;
+}
+
+.month {
+  font-size: 25px;
+}
+
+.date {
+  font-size: 16px;
+}
+
+ul {
+  height: 100%;
+  padding: 0px 5px 0px 20px;
+}
+
+a {
+  color: #17a2b8;
+}
+
+.register_form {
+  margin: 100px 350px;
+}
+
+h4.display-6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.calender2{   /*It changes  the settings of the calender visible on the screen*/
+  width: 77rem;
+  height: 40.6rem;
+}
+
+.month2    /* It makes changes in the  month box specified  green in color*/
+{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid;
+}
+
+.month2 i{  /*It changes the settings for the arrow buttons*/
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month2 h1{  /*It changes the month text settings i.e may fri ... in ths case we have written h1 because we have declared h1 under hte month class*/
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.month2 p{
+    font-size: 1.6rem;
+}
+
+.month2 h2:hover{
+    font-size: 2rem;
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor:pointer;
+}
+
+.weekdays2{
+    width: 100%;
+    height: 5rem;/*repressents the height of calender weekdays*/
+    padding: 0rem 0.4rem 0rem 0.4rem; /*0 represents spacing from upper then LtoR then lower then RtoL*/
+    display: flex;
+    align-items: center;
+    border: 1px solid
+}
+
+.weekdays2 div  /*this will change the week days settings*/
+{
+   font-size: 1rem;/*it changes the font size of weekdays*/
+   font-weight: 400; /*the weight changes the density of the words written*/
+   letter-spacing: 0.2rem; /*it changes the spacing between the letters in the weekdays*/
+   width: 17.9rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.days2
+{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+.days2 div
+{
+  font-size: 1rem;
+  width: 11rem;
+  height: 4.56rem;
+  display: flex;
+  transition: background-color 0.2s;
+  border: 1px solid;
+}
+}
+
+.days2 div:hover:not(.today)
+{
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor:pointer;
+}
+
+.prev-date,
+.next-date
+{
+  opacity: 0.5;
+
+}
