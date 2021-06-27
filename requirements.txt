@@ -1,0 +1,3 @@
+django-crispy-forms
+django[argon2]
+Django==3.0.8
