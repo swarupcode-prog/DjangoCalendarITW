@@ -7,6 +7,17 @@
 
 ![image](https://user-images.githubusercontent.com/76248886/123542041-1346ae00-d765-11eb-8005-3b361c28ec15.png)
 
+## About Our Project :
+
+We have created an event calendar using Django,Html,CSS,JavaScript. 
+
+The functionalities of our calendar are:
+
+1)Adding an Event with specific time
+
+2)Recieving mail as a form of notifiction 
+
+3)Viewing of yearly calendar
 
 
 
