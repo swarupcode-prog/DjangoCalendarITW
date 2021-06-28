@@ -26,6 +26,7 @@ def register(request):
              user = user_form.save() # Saving the data to database
              user.set_password(user.password)  # set_password method used to save the password in hashed form
              user.save()  # Saved the hashed password and user
+             return HttpResponseRedirect(reverse('app:login'))
 
          else:
              print(user_form.errors)
