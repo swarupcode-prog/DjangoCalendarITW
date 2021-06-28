@@ -13,11 +13,11 @@ We have created an event calendar using Django, Html, CSS, JavaScript.
 
 The functionalities of our calendar are:
 
-  1)Adding an Event with specific time
+1) Adding an Event with specific time
 
-  2)Recieving mail as a form of notifiction 
+2) Recieving mail as a form of notifiction 
 
-  3)Viewing of yearly calendar
+3) Viewing of yearly calendar
 
 
 
