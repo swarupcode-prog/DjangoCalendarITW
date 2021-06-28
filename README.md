@@ -23,9 +23,9 @@ The functionalities of our calendar are:
 
 ![Screenshot (309)](https://user-images.githubusercontent.com/85841043/123641573-05199000-d840-11eb-998f-a9a821a974f7.png)
 
-![image](https://user-images.githubusercontent.com/76248886/123542041-1346ae00-d765-11eb-8005-3b361c28ec15.png)
-
 ![Screenshot (310)](https://user-images.githubusercontent.com/85841043/123641704-25e1e580-d840-11eb-89b3-9895109e33f6.png)
+
+![image](https://user-images.githubusercontent.com/76248886/123542041-1346ae00-d765-11eb-8005-3b361c28ec15.png)
 
 
 ## How To Setup
