@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfileInfo, Event
+from .models import Event
 from django.contrib.auth.models import User
 
 # Model form of model 'User' inbuilt in Django
@@ -14,13 +14,6 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('username','email','password') # The generated Form class will have a form field for every model field specified, in the order specified in the fields attribute.
-
-# Model form of model 'UserProfileInfo' in models.py
-class UserProfileForm(forms.ModelForm):  
-    # Django Meta class used to transfer information about the model to the Django forms
-    class Meta:
-        model = UserProfileInfo
-        fields = ('gender',)
 
 # Model form of model 'Event' in models.py
 class EventForm(forms.ModelForm):
