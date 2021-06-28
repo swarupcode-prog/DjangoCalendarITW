@@ -3,16 +3,6 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 # Create your models here.
-# Model for extra information of user
-class UserProfileInfo(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE) # To connect this model to django builtin User model
-    # addition of gender dropdown menue
-    GENDER_CHOICES = (
-        ('M', 'Male'),
-        ('F', 'Female'),
-    )
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, blank=True)
-
 
 class Event(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE) # ForeignKey is used to coincide Event with User class 
