@@ -23,8 +23,7 @@
 
   <form method="post" style="margin: 0px 500px 0px 500px; ">
       {% csrf_token %}
-      {{ user_form|crispy }}
-      {{ profile_form|crispy }} <br>
+      {{ user_form|crispy }} <br>
       <center>
         <input type="submit" class="btn btn-outline-dark" value="Submit">
       </center>
