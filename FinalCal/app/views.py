@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import UserForm,UserProfileForm, EventForm
+from .forms import UserForm, EventForm
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -13,31 +13,23 @@ from django.contrib.auth.models import User
 from .utils import Calendar
 from .models import Event
 
+# Function based view for base
 def base(request):
     return render(request, 'base.html', {})
 
+# Function based view for registration form
 def register(request):
-    registered = False
+    user_form = UserForm(request.POST or None)
     if request.method == 'POST':
-         user_form = UserForm(data=request.POST)
-         profile_form = UserProfileForm(data=request.POST)
-         if user_form.is_valid() and profile_form.is_valid():
-             user = user_form.save()
-             user.set_password(user.password)
-             user.save()
-             profile = profile_form.save(commit=False)
-             profile.user = user
-             profile.save()
-             return HttpResponseRedirect(reverse('app:login'))
-             registration = True
+         if user_form.is_valid(): # Check the form validity
+
+             user = user_form.save() # Saving the data to database
+             user.set_password(user.password)  # set_password method used to save the password in hashed form
+             user.save()  # Saved the hashed password and user
+
          else:
              print(user_form.errors)
-    else:
-        user_form = UserForm()
-        profile_form = UserProfileForm()
-    return render(request, 'register.html', {'user_form': user_form,
-                                             'profile_form': profile_form,
-                                              'registered': registered})
+    return render(request, 'register.html', {'user_form': user_form})
 
 def user_login(request):
 
@@ -45,22 +37,19 @@ def user_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        user = authenticate(username=username, password=password)
+        user = authenticate(username=username, password=password) # checks for authentication of the user automatically
 
         if user:
-            if user.is_active:
-                login(request,user)
+                login(request,user) # django inbuilt function for login
                 return HttpResponseRedirect(reverse('app:calendar'))
-            else:
-                return HttpResponse("Account not active")
         else:
-           return HttpResponse("Invalid username or password")
+            return render(request, "login.html", {'message': "Username and Password are incorrect"})
     else:
         return render(request,'login.html',{})
 
-@login_required
+@login_required # decorators used if person is logged in
 def user_logout(request):
-    logout(request)
+    logout(request) # django inbuilt function for logout
     return HttpResponseRedirect(reverse('app:base'))
 
 def about(request):
@@ -90,7 +79,7 @@ def get_date(req_month):
     return datetime.today()
 
 def prev_month(d):
-    first = d.replace(day=1)
+    first = d.replace(day=1) # Gives first day of month
     prev_month = first - timedelta(days=1)
     month = 'month=' + str(prev_month.year) + '-' + str(prev_month.month)
     return month
@@ -110,7 +99,7 @@ def CalanderView(request):
     today = date.today()
     month = d.month
 
-    return render(request, 'home.html', {'calendar': mark_safe(html_cal),
+    return render(request, 'home.html', {'calendar': mark_safe(html_cal), # make_safe in django is used to make html calendar
                                           'prev_month': prev_month(d),
                                           'next_month': next_month(d),
                                           'month':month,
