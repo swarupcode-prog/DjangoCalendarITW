@@ -1,4 +1,4 @@
-# DjangoCalendarITW
+# DJANGO CALENDAR
 
 ## About Our Project :
 
